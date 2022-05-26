@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="screen" type="text" readonly > <br> <br>
+
+    <input id="Pal"type="number" placeholder="enter principal">
+    <input id="Rate" type="number" placeholder="enter rate">
+    <input id="Tim" type="number" placeholder="enter time">
+    <input id="simp" type="number" placeholder="enter simple intrest"> <br> <br>
+
+    <button onclick="calculate()">Cal. Simple Interest</button>
+    <button onclick="Calculate()">Cal. Principal</button>
+    <button onclick="Calculate()">Cal. Rate</button>
+    <button onclick="Calculate()">Cal. Time</button>
+
+
+    
+    </h1>
+
+</body>
+</html>
+
+<script>
+    function calculate() {
+    let p = document.getElementById("Pal").value;
+    let r = document.getElementById("Rate").value;
+    let t = document.getElementById("Tim").value;
+
+    let si = (p*r*t)/100;
+    
+
+    
+
+    document.getElementById('screen').value = si
+
+    }
+    function Calculate() {
+        let r = document.getElementById("Rate").value;
+        let t = document.getElementById("Tim").value;
+        let s = document.getElementById("simp").value;
+
+        let p = (s*100)/(r*t);
+
+
+        document.getElementById('screen').value = p
+    }
+
+    function Calculate() {
+        let p = document.getElementById("Pal").value
+        let t = document.getElementById("Tim").value;
+        let s = document.getElementById("simp").value;
+
+        let r = (s*100)/(p*t);
+
+
+        document.getElementById('screen').value = r
+
+    }       
+    
+    function Calculate() {
+        let p = document.getElementById("Pal").value
+        let r = document.getElementById("Rate").value;
+        let s = document.getElementById("simp").value;
+
+        let t = (s*100)/(p*r);
+
+
+        document.getElementById('screen').value = t
+
+    }
+
+    
+</script>
